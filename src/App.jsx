@@ -27,7 +27,7 @@ function App() {
 
       <SmoothScrollLink href="#top">
         <FaCircleChevronUp
-          className="fixed bottom-10 right-7 animate-bounce z-50 bg-white"
+          className="fixed bottom-10 right-7 animate-bounce z-50 bg-white rounded-full"
           size={45}
         />
       </SmoothScrollLink>

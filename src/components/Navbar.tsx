@@ -74,9 +74,14 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
+               <a
+              className="text-white"
+              href="https://www.dropbox.com/scl/fo/vs0kd7ouak67dj3dtihhq/APcMhaGyeXZ6To5ge-T3mTU?rlkey=31b82d5dypdj74g7dcahiacwe&st=lo13dbcn&dl=0"
+            >
               <button className="rounded-md bg-black text-white px-6 py-2 text-base hover:bg-black/90 w-full">
                 Download
               </button>
+              </a>
             </div>
           </div>
         )}
