@@ -12,7 +12,7 @@ const Hero = () => {
                 🚀 Simplify Your Research
               </span>
             </div>
-            <h1 className="text-3xl  md:text-4xl xl:text-6xl font-bold mt-8 sm:mt-10 lg:mt-4 mb-6 sm:mb-8 leading-tight bg-gradient-to-r from-black via-purple-600 to-blue-600 text-transparent bg-clip-text">
+            <h1 className="text-3xl  md:text-4xl xl:text-6xl font-bold mt-8 md:mt-10 lg:mt-4 mb-6 md:mb-8 leading-tight bg-gradient-to-r from-black via-purple-600 to-blue-600 text-transparent bg-clip-text">
               Data Analysis Made Easy for Students
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 md:mb-8 lg:mb-10 leading-relaxed">
