@@ -41,7 +41,7 @@ const featuresPage = () => {
     },
     {
       icon: <MdPrivacyTip />,
-      title: "Local Processing = Complete Data Privacy",
+      title: "Complete Data Privacy",
       description:
         "MeMeY runs locally, ensuring no data is uploaded online. Ideal for medical or confidential datasets, it requires no identifier removal. Compliant with HIPAA and GDPR, it offers secure analysis for sensitive research and business needs.",
       keywords: ["secure data analysis", "HIPAA-compliant"],
@@ -105,15 +105,19 @@ const featuresPage = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="w-[300px] h-[400px] md:w-[330px] md:h-[430px] xl:w-[350px] xl:h-[400px] bg-white shadow-lg p-9 space-y-3 relative overflow-hidden hover:scale-95 transition-transform duration-300"
+                className="group w-[300px] h-[400px] bg-white/65 md:w-[330px] md:h-[430px] xl:w-[350px] rounded-xl  border border-black hover:border-blue-600  xl:h-[400px] shadow-lg p-9 space-y-3 relative overflow-hidden  hover:scale-95 transition-all duration-300"
               >
-                <div className="w-24 h-24 bg-blue-500 rounded-full absolute -right-5 -top-7">
+                {/* <div className="w-24 h-24 bg-blue-500 rounded-full absolute -right-5 -top-7">
                   <p className="absolute bottom-6 left-7 text-white text-2xl">
                     {index + 1}
                   </p>
+                </div> */}
+                <div className="text-black group-hover:text-blue-600 text-5xl transition-colors duration-300">
+                  {feature.icon}
                 </div>
-                <div className="text-blue-500 text-5xl absolute top-2">{feature.icon}</div>
-                <h1 className="font-bold text-xl pt-10">{feature.title}</h1>
+                <h1 className="font-bold group-hover:text-blue-600 text-xl transition-colors duration-300">
+                  {feature.title}
+                </h1>
                 <p className="text-sm text-zinc-500 leading-6">
                   {feature.description}
                 </p>
