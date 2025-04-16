@@ -1,5 +1,8 @@
 import React from "react";
 import { BiSupport } from "react-icons/bi";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const HelpPage: React.FC = () => {
   const videos = [
@@ -16,6 +19,34 @@ const HelpPage: React.FC = () => {
       src: "https://www.youtube.com/embed/Ia97htsVDZg?rel=0",
     },
   ];
+
+  // Slider settings
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024, // lg screens
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 640, // sm screens
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <main className="relative bg-gradient-to-b from-gray-50 to-white">
@@ -36,29 +67,26 @@ const HelpPage: React.FC = () => {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 text-center mb-8 sm:mb-12">
             Tutorial Videos (Soundless)
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {videos.map((video, index) => {
-              return (
-                <div
-                  key={index}
-                  className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
-                >
+          <Slider {...sliderSettings} className="mx-[-0.75rem]">
+            {videos.map((video, index) => (
+              <div key={index} className="px-3">
+                <div className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <iframe
                     title={video.title}
                     width="100%"
-                    height="200"
+                    height="500"
                     src={video.src}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
-                    className="w-full h-full"
+                    className="w-full"
                     loading="lazy"
                   />
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            ))}
+          </Slider>
         </div>
 
         {/* Contact Section */}

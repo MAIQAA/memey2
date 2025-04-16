@@ -7,6 +7,7 @@ import HelpSection from "./help/helpPage.tsx";
 import PrivacyPolicy from "./privacyPolicy/privacyPolicyPage.tsx";
 import WalkThrough from "./walkthrough/walkThroughPage.tsx";
 import FAQPage from "./faq/faqPage.tsx";
+import FeaturesPage from "./features/featuresPage.tsx";
 
 import { FaCircleChevronUp } from "react-icons/fa6";
 import SmoothScrollLink from "./components/SmoothScrollLink.tsx";
@@ -23,6 +24,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/walkthrough" element={<WalkThrough />} />
         <Route path="*" element={<div>404 - Page Not Found</div>} />
+        <Route path="/features" element={<FeaturesPage />} />
       </Routes>
 
       <SmoothScrollLink href="#top">

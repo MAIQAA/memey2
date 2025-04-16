@@ -83,10 +83,17 @@ const ChoosePath = () => {
 
   return (
     <main className="relative mt-12 sm:mt-16 md:mt-[4.15rem]" id="choose-path">
-      <div className="w-full max-w-8xl mx-auto py-8 sm:py-10 lg:py-[3.35rem] px-4 sm:px-6 lg:px-8 bg-white">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 lg:mb-16 bg-gradient-to-r from-black to-blue-600 bg-clip-text text-transparent">
-          Choose Your Path
-        </h2>
+      <div className="w-full max-w-7xl mx-auto py-8 sm:py-12 lg:py-16 px-4 md:px-0 bg-white">
+        {/* Header Section */}
+        <div className="text-center animate-fade-in space-y-3 mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-black to-blue-600 bg-clip-text text-transparent">
+            Choose Your Path
+          </h2>
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto">
+            Whether you're a student, researcher, or entrepreneur — MeMeY guides
+            your data journey.
+          </p>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
           {paths.map((path, index) => (
             <PathCard key={index} {...path} />

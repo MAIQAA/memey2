@@ -1,18 +1,20 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Hamburger and close icons
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "Features", href: "/features" },
     { label: "Help", href: "/help" },
     { label: "FAQ", href: "/faq" },
-    { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Walkthrough", href: "/walkthrough" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
   ];
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 bg-white shadow-sm">
+    <nav className="fixed inset-x-0 top-0 z-40 bg-white shadow-sm">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center">
@@ -74,13 +76,13 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-               <a
-              className="text-white"
-              href="https://www.dropbox.com/scl/fo/vs0kd7ouak67dj3dtihhq/APcMhaGyeXZ6To5ge-T3mTU?rlkey=31b82d5dypdj74g7dcahiacwe&st=lo13dbcn&dl=0"
-            >
-              <button className="rounded-md bg-black text-white px-6 py-2 text-base hover:bg-black/90 w-full">
-                Download
-              </button>
+              <a
+                className="text-white"
+                href="https://www.dropbox.com/scl/fo/vs0kd7ouak67dj3dtihhq/APcMhaGyeXZ6To5ge-T3mTU?rlkey=31b82d5dypdj74g7dcahiacwe&st=lo13dbcn&dl=0"
+              >
+                <button className="rounded-md bg-black text-white px-6 py-2 text-base hover:bg-black/90 w-full">
+                  Download
+                </button>
               </a>
             </div>
           </div>
