@@ -27,7 +27,7 @@ const MediaText: React.FC<MediaTextProps> = ({
   const closePopup = () => setIsPopupOpen(false);
 
   return (
-    <div className="z-50">
+    <section className="z-50">
       <div
         className={`flex flex-col ${
           imageOnRight ? "md:flex-row-reverse" : "md:flex-row"
@@ -88,7 +88,7 @@ const MediaText: React.FC<MediaTextProps> = ({
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

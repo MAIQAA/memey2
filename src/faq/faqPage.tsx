@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BiSupport } from "react-icons/bi";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { faqs } from "../constants/data.ts";
 
 const FAQPage: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -8,34 +9,6 @@ const FAQPage: React.FC = () => {
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-
-  const faqs = [
-    {
-      question: "What is MeMeY?",
-      answer:
-        "MeMeY is a user-friendly data analysis tool designed specifically for students. It simplifies the process of analyzing research data while maintaining powerful capabilities, allowing you to focus on results rather than complexity.",
-    },
-    {
-      question: "How do I get started with MeMeY?",
-      answer:
-        "To get started, sign up for an account on our website, download the MeMeY app, and follow the onboarding tutorial. You can also check out our tutorial videos on the Help page for a step-by-step guide on logging in and importing data.",
-    },
-    {
-      question: "Is my data secure with MeMeY?",
-      answer:
-        "Yes, MeMeY prioritizes your privacy. We don’t sell your email or personal information to third parties, and we don’t record your payment details or any data you input into the app. MeMeY is designed to work fully offline, ensuring your data stays private. Check our Privacy Policy for more details.",
-    },
-    {
-      question: "What kind of data can I analyze with MeMeY?",
-      answer:
-        "MeMeY supports a variety of data types, including spreadsheets (CSV, Excel), and allows you to perform analyses like outlier detection, regressions, summary statistics, and more. It’s built to handle both numeric and categorical data effectively.",
-    },
-    {
-      question: "How do I contact support if I have issues?",
-      answer:
-        "You can reach out to our support team by emailing us at support@memey.cloud. We’re here to help with any questions or issues you encounter while using MeMeY!",
-    },
-  ];
 
   return (
     <main className="relative bg-gradient-to-b from-gray-50 to-white">
@@ -60,7 +33,7 @@ const FAQPage: React.FC = () => {
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex justify-between items-center px-4 sm:px-6 py-4 text-left focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full flex justify-between items-center px-4 sm:px-6 py-4 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 "
                   aria-expanded={openIndex === index}
                   aria-controls={`faq-answer-${index}`}
                 >
@@ -76,7 +49,7 @@ const FAQPage: React.FC = () => {
                 {openIndex === index && (
                   <div
                     id={`faq-answer-${index}`}
-                    className="px-4 sm:px-6 py-4 bg-gray-50 text-gray-700 text-base sm:text-lg leading-relaxed break-words"
+                    className="px-4 sm:px-6 py-4  text-gray-700 text-base sm:text-lg leading-relaxed break-words"
                     role="region"
                     aria-labelledby={`faq-question-${index}`}
                   >

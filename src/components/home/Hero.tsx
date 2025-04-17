@@ -3,11 +3,11 @@ import SmoothScrollLink from "../SmoothScrollLink.tsx";
 
 const Hero = () => {
   return (
-    <main className="relative">
+    <section className="relative">
       <div className="w-full   py-8 sm:py-10 lg:py-[3.35rem] px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
         <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           <div>
-            <div className="absolute top-0 left-0">
+            <div className="absolute -top-2 lg:-top-7 xl:top-0 left-0">
               <span className="bg-black/10 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold">
                 🚀 Simplify Your Research
               </span>
@@ -19,7 +19,7 @@ const Hero = () => {
               MeMeY simplifies research data analysis while maintaining powerful
               capabilities. Focus on results, not complexity.
             </p>
-            <div className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-7">
+            <div className="flex flex-row gap-4 md:gap-6 lg:gap-7">
               <SmoothScrollLink className="text-white" href="#choose-path">
                 <button className="rounded-lg bg-black  px-6 sm:px-8 lg:px-10 py-3 sm:py-4 text-sm md:text-base lg:text-lg hover:bg-black/90 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                   Get Started
@@ -41,7 +41,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 

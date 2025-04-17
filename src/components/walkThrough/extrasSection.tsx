@@ -9,7 +9,7 @@ const ExtrasSection: React.FC = () => {
   ];
 
   return (
-    <div className="mt-12 sm:mt-16 animate-fade-in">
+    <section className="mt-12 sm:mt-16 animate-fade-in">
       <hr className="border-gray-300 mb-8" />
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 text-center mb-6 sm:mb-8">
         Extras
@@ -27,7 +27,7 @@ const ExtrasSection: React.FC = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 

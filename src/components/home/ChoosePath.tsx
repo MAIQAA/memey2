@@ -1,19 +1,7 @@
 import React from "react";
-import { FaCapsules, FaDownload, FaPills } from "react-icons/fa6";
+import { paths, Path } from "../../constants/data.ts";
 
-type PathCardProps = {
-  icon: React.ComponentType<{ className?: string }>;
-  iconBgColor: string;
-  iconColor: string;
-  title: string;
-  description: string;
-  buttonText: string;
-  buttonBgColor: string;
-  buttonHoverColor: string;
-  link: string;
-};
-
-const PathCard: React.FC<PathCardProps> = ({
+const PathCard: React.FC<Path> = ({
   icon: Icon,
   iconBgColor,
   iconColor,
@@ -45,45 +33,12 @@ const PathCard: React.FC<PathCardProps> = ({
 );
 
 const ChoosePath = () => {
-  const paths = [
-    {
-      icon: FaPills,
-      iconBgColor: "bg-red-100",
-      iconColor: "text-red-600",
-      title: "Red Pill",
-      description: "Discover the truth about research",
-      buttonText: "Learn More",
-      buttonBgColor: "bg-red-600",
-      buttonHoverColor: "hover:bg-red-700",
-      link: "/red-pill",
-    },
-    {
-      icon: FaCapsules,
-      iconBgColor: "bg-blue-100",
-      iconColor: "text-blue-600",
-      title: "Blue Pill",
-      description: "Take a guided tour of MeMeY features",
-      buttonText: "Take Tour",
-      buttonBgColor: "bg-blue-600",
-      buttonHoverColor: "hover:bg-blue-700",
-      link: "/blue-pill",
-    },
-    {
-      icon: FaDownload,
-      iconBgColor: "bg-black/10",
-      iconColor: "text-black",
-      title: "Direct Download",
-      description: "Get started with MeMeY right away",
-      buttonText: "Download Now",
-      buttonBgColor: "bg-black",
-      buttonHoverColor: "hover:bg-black/90",
-      link: "https://www.dropbox.com/scl/fo/vs0kd7ouak67dj3dtihhq/APcMhaGyeXZ6To5ge-T3mTU?rlkey=31b82d5dypdj74g7dcahiacwe&st=lo13dbcn&dl=0",
-    },
-  ];
-
   return (
-    <main className="relative mt-12 sm:mt-16 md:mt-[4.15rem]" id="choose-path">
-      <div className="w-full max-w-7xl mx-auto py-8 sm:py-12 lg:py-16 px-4 md:px-0 bg-white">
+    <section
+      className="relative bg-gradient-to-t from-gray-50 to-white py-6 md:py-10"
+      id="choose-path"
+    >
+      <div className="w-full max-w-7xl mx-auto py-8 md:py-10 lg:py-[3.35rem] px-4 md:px-0">
         {/* Header Section */}
         <div className="text-center animate-fade-in space-y-3 mb-8 sm:mb-12 lg:mb-16">
           <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-black to-blue-600 bg-clip-text text-transparent">
@@ -100,7 +55,7 @@ const ChoosePath = () => {
           ))}
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 

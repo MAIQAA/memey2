@@ -1,14 +1,5 @@
-import { FaWandMagic } from "react-icons/fa6";
-import { FaBroom } from "react-icons/fa6";
-import { PiTestTubeFill } from "react-icons/pi";
-import { IoDocumentText } from "react-icons/io5";
 import React from "react";
-
-interface FeatureCardProps {
-  icon: React.ComponentType<{ className?: string }>;
-  title: string;
-  description: string;
-}
+import { features, FeatureCardProps } from "../../constants/data.ts";
 
 const FeatureCard = ({ icon: Icon, title, description }: FeatureCardProps) => (
   <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
@@ -19,32 +10,9 @@ const FeatureCard = ({ icon: Icon, title, description }: FeatureCardProps) => (
 );
 
 const Features = () => {
-  const features = [
-    {
-      icon: FaWandMagic,
-      title: "One-Click Analysis",
-      description: "Just click 'analyze' and let MeMeY handle the complexity",
-    },
-    {
-      icon: FaBroom,
-      title: "Data Cleaning",
-      description: "Automated data cleaning and preprocessing",
-    },
-    {
-      icon: PiTestTubeFill,
-      title: "Testing",
-      description: "Comprehensive statistical testing suite",
-    },
-    {
-      icon: IoDocumentText,
-      title: "Reporting",
-      description: "Automated report generation with insights",
-    },
-  ];
-
   return (
-    <main
-      className="relative bg-gradient-to-b from-gray-50 to-white"
+    <section
+      className="relative bg-gradient-to-b from-gray-50 to-white py-6 md:py-10"
       id="Feature"
     >
       <div className="w-full max-w-7xl mx-auto py-8 md:py-10 lg:py-[3.35rem] px-4 md:px-0">
@@ -64,7 +32,7 @@ const Features = () => {
           ))}
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 
