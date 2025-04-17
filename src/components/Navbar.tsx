@@ -14,7 +14,10 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-40 bg-white shadow-sm">
+    <nav
+      className="fixed inset-x-0 top-0 bg-white shadow-sm"
+      style={{ zIndex: 900 }}
+    >
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center">
