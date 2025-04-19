@@ -11,6 +11,7 @@ import FeaturesPage from "./features/featuresPage.tsx";
 
 import { FaCircleChevronUp } from "react-icons/fa6";
 import SmoothScrollLink from "./components/SmoothScrollLink.tsx";
+import ContactPage from "./contact-us/ContactPage.tsx";
 
 function App() {
   return (
@@ -23,8 +24,9 @@ function App() {
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/walkthrough" element={<WalkThrough />} />
-        <Route path="*" element={<div>404 - Page Not Found</div>} />
+        <Route path="/contact-us" element={<ContactPage/>}/>
         <Route path="/features" element={<FeaturesPage />} />
+        <Route path="*" element={<div>404 - Page Not Found</div>} />
       </Routes>
 
       <SmoothScrollLink href="#top">

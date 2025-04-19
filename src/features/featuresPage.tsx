@@ -2,14 +2,15 @@ import React from "react";
 import { FeatureCardProps, featuresDeatiled } from "../constants/data.ts";
 
 const FeatureCard = ({ icon: Icon, title, description }: FeatureCardProps) => (
-  <div className="group w-[300px] h-[400px] bg-white/65 md:w-[330px] md:h-[430px] xl:w-[350px] rounded-xl  border border-black hover:border-blue-600  xl:h-[400px] shadow-lg p-9 space-y-3 relative overflow-hidden  hover:scale-95 transition-all duration-300">
-    <div className="text-black group-hover:text-blue-600 text-5xl transition-colors duration-300">
-      <Icon className="text-black group-hover:text-blue-600 text-5xl transition-colors duration-300" />
+  <div className="group relative mx-auto w-full max-w-sm overflow-hidden rounded-lg shadow-lg bg-white p-0.5 transition-all duration-500 hover:scale-[1.01] hover:bg-blue-100">
+    <div className="relative h-[450px] z-10 flex flex-col items-center justify-center overflow-hidden rounded-[7px] bg-white p-8 transition-colors duration-300">
+      <Icon className="relative z-10 mb-10 mt-2 rounded-full border-2 border-blue-500 bg-blue-100 p-4 text-7xl text-blue-500 group-hover:bg-blue-500 group-hover:text-white group-hover:border-white transition-colors duration-500" />
+      <h4 className="relative z-10 mb-4 w-full text-xl font-bold text-slate-900">
+        {title}
+      </h4>
+      <p className="relative z-10 text-slate-600">{description}</p>
     </div>
-    <h1 className="font-bold group-hover:text-blue-600 text-xl transition-colors duration-300">
-      {title}
-    </h1>
-    <p className="text-sm text-zinc-500 leading-6">{description}</p>
+    <div className="absolute inset-0 z-0 bg-gradient-to-br from-indigo-200 via-indigo-200/0 to-indigo-200 opacity-100 group-hover:opacity-100 transition-opacity duration-500 animate-rotate-slow"></div>
   </div>
 );
 
@@ -19,7 +20,7 @@ const featuresPage = () => {
       <div className="space-y-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 lg:pt-16">
         {/* Header Section */}
         <div className="flex flex-col items-center justify-center text-center animate-fade-in">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 md:mb-8">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-black to-blue-600 bg-clip-text text-transparent mb-6 md:mb-8">
             Features of MeasureMenuY
           </h1>
           <p className="max-w-4xl">

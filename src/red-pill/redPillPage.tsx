@@ -286,7 +286,7 @@ const RedPillSection: React.FC = () => {
         {/* Button Section */}
         <div className="mt-8 sm:mt-12 flex justify-center">
           <a
-            href="https://www.dropbox.com/scl/fo/vs0kd7ouak67dj3dtihhq/APcMhaGyeXZ6To5ge-T3mTU?rlkey=3jssbcausnjpbwv6qp9t9hgi0&st=l5jsuy5g&dl=0"
+            href="https://www.dropbox.com/scl/fo/vs0kd7ouak67dj3dtihhq/APcMhaGyeXZ6To5ge-T3mTU?rlkey=31b82d5dypdj74g7dcahiacwe&st=lo13dbcn&dl=0"
             className="inline-block rounded-lg bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium hover:bg-blue-700 transition-colors duration-300"
           >
             GET MEMEY

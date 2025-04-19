@@ -55,8 +55,8 @@ const Footer: React.FC = () => {
     {
       title: "Product",
       links: [
-        { label: "Features", href: "#Feature" },
-        { label: "Comparison", href: "#Comparison" },
+        { label: "Home", href: "/" },
+        { label: "Features", href: "/features" },
         {
           label: "Download",
           href: "https://www.dropbox.com/scl/fo/vs0kd7ouak67dj3dtihhq/APcMhaGyeXZ6To5ge-T3mTU?rlkey=31b82d5dypdj74g7dcahiacwe&st=lo13dbcn&dl=0",
@@ -69,6 +69,7 @@ const Footer: React.FC = () => {
         { label: "FAQ", href: "/faq" },
         { label: "Help Center", href: "/help" },
         { label: "WalkThrough", href: "/walkthrough" },
+        { label: "Contact Us", href: "/contact" },
       ],
     },
     {

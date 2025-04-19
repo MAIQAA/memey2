@@ -11,6 +11,7 @@ const Navbar = () => {
     { label: "FAQ", href: "/faq" },
     { label: "Walkthrough", href: "/walkthrough" },
     { label: "Privacy Policy", href: "/privacy-policy" },
+    { label : "Contact Us" , href: "/contact-us"},
   ];
 
   return (
