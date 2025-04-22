@@ -2,8 +2,8 @@ import React from "react";
 import { FeatureCardProps, featuresDeatiled } from "../constants/data.ts";
 
 const FeatureCard = ({ icon: Icon, title, description }: FeatureCardProps) => (
-  <div className="group relative mx-auto w-full max-w-sm overflow-hidden rounded-lg shadow-lg bg-white p-0.5 transition-all duration-500 hover:scale-[1.01] hover:bg-blue-100">
-    <div className="relative h-[450px] z-10 flex flex-col items-center justify-center overflow-hidden rounded-[7px] bg-white p-8 transition-colors duration-300">
+  <div className="group relative w-full max-w-sm md:max-w-xs overflow-hidden rounded-lg shadow-lg bg-white p-0.5 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:bg-blue-100">
+    <div className="relative h-[480px] z-10 flex flex-col items-center overflow-hidden rounded-[7px] bg-white p-8 transition-colors duration-300">
       <Icon className="relative z-10 mb-10 mt-2 rounded-full border-2 border-blue-500 bg-blue-100 p-4 text-7xl text-blue-500 group-hover:bg-blue-500 group-hover:text-white group-hover:border-white transition-colors duration-500" />
       <h4 className="relative z-10 mb-4 w-full text-xl font-bold text-slate-900">
         {title}

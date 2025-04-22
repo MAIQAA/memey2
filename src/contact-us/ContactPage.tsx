@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import React, { useState, FormEvent } from "react";
 import { BiSupport } from "react-icons/bi";
 
@@ -92,6 +93,11 @@ const ContactPage: React.FC = () => {
     }
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   return (
     <main className="relative bg-gradient-to-b from-gray-50 to-white">
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
@@ -107,15 +113,17 @@ const ContactPage: React.FC = () => {
         </div>
 
         {/* Contact Form Section */}
-        <div className="w-full sm:w-4/5 md:w-2/3 lg:w-1/2 mx-auto mt-16 animate-fade-in-up">
-          <div className="bg-white/30 backdrop-blur-lg rounded-2xl shadow-2xl p-8 border border-white/20 transition-all duration-500 hover:shadow-blue-300 hover:-translate-y-1">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-800 text-center mb-6 animate-fade-in-down">
-              Get in Touch
+        <motion.div
+          className="w-full sm:w-4/5 md:w-2/3 lg:w-1/2 mx-auto mt-16"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <div className="bg-gradient-to-br from-white/90 to-blue-50/90 backdrop-blur-lg rounded-2xl shadow-xl p-8 sm:p-10 border border-blue-200 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-blue-600 text-center mb-6 sm:mb-8">
+              Let’s Connect!
             </h2>
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col space-y-5 animate-fade-in"
-            >
+            <form onSubmit={handleSubmit} className="flex flex-col space-y-6">
               {/* Honeypot Field */}
               <input
                 type="text"
@@ -137,7 +145,7 @@ const ContactPage: React.FC = () => {
                 {
                   id: "email",
                   type: "email",
-                  placeholder: "Email",
+                  placeholder: "Email Address",
                   required: true,
                 },
                 {
@@ -160,7 +168,7 @@ const ContactPage: React.FC = () => {
                     name={id}
                     value={formData[id]}
                     onChange={handleChange}
-                    className={`w-full bg-white/80 text-gray-800 placeholder-transparent border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent peer transition-all duration-300 ${
+                    className={`w-full bg-white/70 text-gray-800 placeholder-transparent border border-blue-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent peer transition-all duration-300 hover:shadow-md ${
                       errors[id] ? "border-red-500" : ""
                     }`}
                     placeholder={placeholder}
@@ -168,12 +176,14 @@ const ContactPage: React.FC = () => {
                   />
                   <label
                     htmlFor={id}
-                    className="absolute left-4 -top-3.5 text-gray-600 text-sm bg-white/90 px-1 rounded transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-blue-600"
+                    className="absolute left-4 -top-3.5 text-teal-600 text-sm bg-white/80 px-1 rounded transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-blue-600"
                   >
                     {placeholder}
                   </label>
                   {errors[id] && (
-                    <p className="text-sm text-red-500 mt-1">{errors[id]}</p>
+                    <p className="text-sm text-red-500 mt-1 animate-pulse">
+                      {errors[id]}
+                    </p>
                   )}
                 </div>
               ))}
@@ -186,45 +196,52 @@ const ContactPage: React.FC = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
-                  placeholder="Message"
+                  placeholder="Your Message"
                   aria-required="true"
-                  className={`w-full bg-white/80 text-gray-800 placeholder-transparent border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent peer transition-all duration-300 ${
+                  className={`w-full bg-white/70 text-gray-800 placeholder-transparent border border-blue-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent peer transition-all duration-300 hover:shadow-md ${
                     errors.message ? "border-red-500" : ""
                   }`}
                 />
                 <label
                   htmlFor="message"
-                  className="absolute left-4 -top-3.5 text-gray-600 text-sm bg-white/90 px-1 rounded transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-blue-600"
+                  className="absolute left-4 -top-3.5 text-teal-600 text-sm bg-white/80 px-1 rounded transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-blue-600"
                 >
-                  Message
+                  Your Message
                 </label>
                 {errors.message && (
-                  <p className="text-sm text-red-500 mt-1">{errors.message}</p>
+                  <p className="text-sm text-red-500 mt-1 animate-pulse">
+                    {errors.message}
+                  </p>
                 )}
               </div>
 
               {/* Submit Button */}
-              <button
+              <motion.button
                 type="submit"
                 disabled={status === "sending"}
-                className="bg-gradient-to-br from-blue-500 to-indigo-600 text-white font-semibold text-lg py-3 rounded-lg shadow-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+                className="bg-gradient-to-br from-blue-500 to-blue-600 text-white font-semibold text-lg py-3 rounded-lg shadow-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                {status === "sending" ? "Sending..." : "Send Message 🚀"}
-              </button>
+                {status === "sending" ? "Sending..." : "Send Message"}
+              </motion.button>
 
               {/* Status Message */}
               {statusMessage && (
-                <p
+                <motion.p
                   className={`text-center text-sm mt-2 ${
                     status === "success" ? "text-green-600" : "text-red-600"
-                  } animate-fade-in`}
+                  }`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
                 >
                   {statusMessage}
-                </p>
+                </motion.p>
               )}
             </form>
           </div>
-        </div>
+        </motion.div>
 
         {/* Support Section */}
         <div className="mt-12 sm:mt-16 text-center animate-fade-in">

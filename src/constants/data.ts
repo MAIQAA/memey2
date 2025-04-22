@@ -310,70 +310,70 @@ export const featuresDeatiled: FeatureCardProps[] = [
     icon: HiCursorClick,
     title: "One-Click Automatic Analysis",
     description:
-      "MeMeY eliminates manual data work with powerful algorithms. It automatically compares dataset columns, conducts hypothesis tests, and highlights significant relationships. No need to choose tests—MeMeY handles it all, saving time and effort for users of any skill level.",
+      "MeMeY removes manual work with powerful algorithms. It compares every column, runs hypothesis tests, and highlights statistically significant relationships—automatically—making data analysis fast, simple, and insightful, even for non-technical users.",
     keywords: ["automatic data analysis", "no-code tool"],
   },
   {
     icon: FaChartPie,
     title: "Hypothesis Testing with Smart Statistics",
     description:
-      "MeMeY uses nonparametric tests to find provable data relationships, avoiding assumptions. Results include p-values, alpha thresholds, and clear statements. The Interpretation Assistant button explains outcomes in plain English, making complex statistics accessible to everyone.",
+      "MeMeY uses nonparametric tests to avoid assumptions and deliver provable insights. It includes p-values, alpha thresholds, and similarity statements, making it easy to identify real relationships with statistical clarity and confidence.",
     keywords: ["hypothesis testing software", "statistical analysis"],
   },
   {
     icon: FaHandsHelping,
     title: "Built-in Interpretation Assistance",
     description:
-      "MeMeY simplifies statistical results for all users. Each result includes a “What does this mean?” guide with instant context, implications, and recommendations. It’s perfect for beginners, ensuring data insights are clear without needing a statistics background.",
+      "Statistical results can be confusing—MeMeY solves that. Every output includes a guide explaining what the result means, its impact, and next steps, making insights accessible to anyone, especially beginners with no statistics background.",
     keywords: ["data insight tool", "beginner-friendly analysis"],
   },
   {
     icon: PiMicrosoftExcelLogoFill,
     title: "Excel-Compatible Reports",
     description:
-      "Easily share or explore MeMeY results in Excel. Copy tables or individual results directly. Export graphs as images for reports. Use MeMeY’s interactive table or download for offline analysis, making data sharing seamless and efficient.",
+      "Copy tables and results directly into Excel. Export graphs as images for reports. MeMeY makes offline data sharing seamless and efficient, offering both interactive results and static formats for further exploration or presentation.",
     keywords: ["export data analysis to Excel"],
   },
   {
     icon: MdPrivacyTip,
     title: "Complete Data Privacy",
     description:
-      "MeMeY runs locally, ensuring no data is uploaded online. Ideal for medical or confidential datasets, it requires no identifier removal. Compliant with HIPAA and GDPR, it offers secure analysis for sensitive research and business needs.",
+      "MeMeY runs locally on your device, never uploading data online. This ensures compliance with HIPAA and GDPR, offering secure, private analysis for sensitive medical, business, or academic datasets without removing personal identifiers.",
     keywords: ["secure data analysis", "HIPAA-compliant"],
   },
   {
     icon: MdDocumentScanner,
     title: "Bulk Testing Without Guesswork",
     description:
-      "MeMeY scans entire datasets automatically, unlike tools analyzing one variable at a time. It supports massive datasets, eliminates guessing, and highlights key patterns and trends, helping users uncover insights they might otherwise miss.",
+      "Instead of analyzing one result at a time, MeMeY automatically scans entire datasets, identifies significant relationships, and highlights patterns—removing guesswork and enabling meaningful discovery from even the most complex data collections.",
     keywords: ["data scanning tool", "full dataset analysis"],
   },
   {
     icon: FaList,
     title: "Visual + List-Based Insights",
     description:
-      "MeMeY combines box-and-whisker plots with a List View showing precise values and outliers. This dual approach prevents misinterpretations, helping users understand data at both macro and micro levels for clearer, more accurate insights.",
+      "MeMeY improves traditional box-and-whisker plots with a List View. It clearly shows value distribution and outliers, making data interpretation easier and preventing common errors in understanding data spreads or assumptions.",
     keywords: ["data visualization", "outlier detection"],
   },
   {
     icon: GrSecure,
     title: "Built-in Safety Rails Against Mistakes",
     description:
-      "MeMeY prevents errors with guardrails, blocking incorrect methods and using adaptable algorithms. It ensures reliable results, offering professional accuracy. Beginners can analyze data confidently without a data science degree, reducing costly mistakes.",
+      "MeMeY includes built-in guardrails to prevent incorrect statistical methods. Adaptive algorithms ensure accurate results, making it safe for beginners and professionals alike to analyze data without common, costly interpretation mistakes.",
     keywords: ["error-proof analysis tool", "beginner-safe statistics"],
   },
   {
     icon: CgPerformance,
     title: "Lightning Fast Performance",
     description:
-      "Built in Go, MeMeY outperforms Python or R, processing large datasets in seconds. Running locally, it delivers unmatched speed for academics, analysts, and businesses needing quick results without compromising on accuracy or reliability.",
+      "Written in Go, MeMeY processes massive datasets faster than Python or R. It runs locally, delivering near-instant results—ideal for researchers, analysts, and businesses needing speed without sacrificing accuracy or performance.",
     keywords: ["fast data analysis software"],
   },
   {
     icon: MdGroups3,
     title: "Designed for Everyone",
     description:
-      "MeMeY suits small business owners, medical researchers, students, or teachers. It simplifies complex data analysis, making it clear, fast, and engaging. Regardless of expertise, MeMeY adapts to deliver insights for diverse analytical needs.",
+      "Whether you’re a business owner, student, teacher, or researcher, MeMeY adapts to your needs. It simplifies complex data analysis, delivering valuable insights clearly, quickly, and confidently—no advanced training or coding required.",
     keywords: [],
   },
 ];
