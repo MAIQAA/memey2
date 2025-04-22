@@ -142,7 +142,7 @@ export const comparisons: Comparison[] = [
     title: "MeMeY",
     features: [
       "✓ One-Click Analysis",
-      "✓ AI-Powered",
+      "✓ Smart Insights",
       "✓ Auto Reporting",
       "✓ No Code Needed",
     ],
