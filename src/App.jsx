@@ -16,6 +16,7 @@ import ContactPage from "./contact-us/ContactPage.tsx";
 function App() {
   return (
     <main className="mt-16 md:mt-[4.15rem]" id="top">
+      <Analytics />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/red-pill" element={<RedPillSection />} />
@@ -24,7 +25,7 @@ function App() {
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/walkthrough" element={<WalkThrough />} />
-        <Route path="/contact-us" element={<ContactPage/>}/>
+        <Route path="/contact-us" element={<ContactPage />} />
         <Route path="/features" element={<FeaturesPage />} />
         <Route path="*" element={<div>404 - Page Not Found</div>} />
       </Routes>
