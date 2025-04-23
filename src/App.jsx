@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import { Analytics } from "@vercel/analytics/react";
 import Home from "./home/home.tsx"; // Now a default import
 import BluePillSection from "./blue-pill/bluePillPage.tsx";
 import RedPillSection from "./red-pill/redPillPage.tsx";
@@ -8,7 +9,6 @@ import PrivacyPolicy from "./privacyPolicy/privacyPolicyPage.tsx";
 import WalkThrough from "./walkthrough/walkThroughPage.tsx";
 import FAQPage from "./faq/faqPage.tsx";
 import FeaturesPage from "./features/featuresPage.tsx";
-
 import { FaCircleChevronUp } from "react-icons/fa6";
 import SmoothScrollLink from "./components/SmoothScrollLink.tsx";
 import ContactPage from "./contact-us/ContactPage.tsx";
