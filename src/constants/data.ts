@@ -191,7 +191,7 @@ export const features: FeatureCardProps[] = [
 export const pricingPlans: PricingCardProps[] = [
   {
     title: "Personal License",
-    price: "$99",
+    price: "$79",
     description: "Ideal for individual users, students, and solo analysts.",
     features: [
       "Use on 1 device",
@@ -199,7 +199,6 @@ export const pricingPlans: PricingCardProps[] = [
       "Export results to Excel",
       "Interpretation assistant",
       "Local processing",
-      "Free updates for the year",
     ],
     buttonText: "Get Personal Plan",
   },
@@ -210,9 +209,6 @@ export const pricingPlans: PricingCardProps[] = [
     features: [
       "Everything in Personal",
       "Use on up to 3 devices",
-      "Priority email support",
-      "Business usage rights",
-      "Internal report sharing license",
     ],
     buttonText: "Get Business Plan",
     isRecommended: true,
@@ -222,12 +218,11 @@ export const pricingPlans: PricingCardProps[] = [
     price: "$999",
     description: "Tailored for universities, labs, and large organizations.",
     features: [
-      "Everything in Business",
-      "Unlimited devices within one organization",
+
       "Classroom or lab deployment",
       "Compliance support (HIPAA, GDPR)",
-      "License certificate for accreditation",
       "Direct access to tech team for setup",
+      "Priority Email Support"
     ],
     buttonText: "Get Institution Plan",
   },

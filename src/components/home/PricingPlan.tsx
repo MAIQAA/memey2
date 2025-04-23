@@ -56,7 +56,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
             ))}
           </div>
 
-          <div className="relative mt-8">
+          <a href="/contact-us" className="relative mt-8">
             <button
               className="group/btn relative w-full overflow-hidden rounded-lg bg-black  p-px font-semibold text-white shadow-[0_1000px_0_0_hsl(0_0%_100%_/_0%)_inset] transition-colors hover:shadow-[0_1000px_0_0_hsl(0_0%_100%_/_2%)_inset]"
               aria-label={`Purchase ${title}`}
@@ -68,7 +68,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
                 </span>
               </div>
             </button>
-          </div>
+          </a>
         </div>
       </div>
     </div>

@@ -35,7 +35,7 @@ const PathCard: React.FC<Path> = ({
 const ChoosePath = () => {
   return (
     <section
-      className="relative bg-gradient-to-t from-gray-50 to-white py-6 md:py-10"
+      className="relative bg-gradient-to-t from-gray-50/0 to-white py-6 md:py-10"
       id="choose-path"
     >
       <div className="w-full max-w-7xl mx-auto py-8 md:py-10 lg:py-[3.35rem] px-4 xl:px-0">

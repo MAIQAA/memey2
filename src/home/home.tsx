@@ -4,7 +4,7 @@ import Hero from "../components/home/Hero.tsx";
 import Features from "../components/home/Features.tsx";
 import Comparison from "../components/home/ComparisonSection.tsx";
 import ChoosePath from "../components/home/ChoosePath.tsx";
-import Testimonials from "../components/home/Testimonials.tsx";
+// import Testimonials from "../components/home/Testimonials.tsx";
 import PricingSection from "../components/home/PricingPlan.tsx";
 
 const Home: React.FC = () => {
@@ -93,7 +93,7 @@ const Home: React.FC = () => {
         <Comparison />
         <PricingSection />
         <ChoosePath />
-        <Testimonials />
+        {/* <Testimonials /> */}
       </main>
     </>
   );
