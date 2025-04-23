@@ -1,6 +1,7 @@
-import { motion } from "motion/react";
 import React, { useState, FormEvent } from "react";
+import { Helmet } from "react-helmet-async";
 import { BiSupport } from "react-icons/bi";
+import { motion } from "framer-motion";
 
 const ContactPage: React.FC = () => {
   interface ContactFormFields {
@@ -9,7 +10,7 @@ const ContactPage: React.FC = () => {
     phone: string;
     subject: string;
     message: string;
-    honeypot?: string; // Optional honeypot field for spam protection
+    honeypot?: string;
   }
 
   const [formData, setFormData] = useState<ContactFormFields>({
@@ -21,9 +22,7 @@ const ContactPage: React.FC = () => {
     honeypot: "",
   });
   const [errors, setErrors] = useState<Partial<ContactFormFields>>({});
-  const [status, setStatus] = useState<
-    "idle" | "sending" | "success" | "error"
-  >("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [statusMessage, setStatusMessage] = useState("");
 
   const validateForm = (): boolean => {
@@ -41,7 +40,7 @@ const ContactPage: React.FC = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (formData.honeypot) return; // Spam bot detected
+    if (formData.honeypot) return;
     if (!validateForm()) return;
 
     setStatus("sending");
@@ -98,166 +97,215 @@ const ContactPage: React.FC = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Contact MeMeY",
+    description:
+      "Contact MeMeY for support or inquiries about our data analysis platform for students.",
+    url: "https://memey2-o99r.vercel.app/contact",
+    publisher: {
+      "@type": "Organization",
+      name: "MeMeY",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://memey2-o99r.vercel.app/mmy-logo.webp",
+      },
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "support@memey.cloud",
+      contactType: "Customer Support",
+    },
+  };
+
   return (
-    <main className="relative bg-gradient-to-b from-gray-50 to-white">
-      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-        {/* Header Section */}
-        <div className="text-center animate-fade-in">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-black to-blue-600 bg-clip-text text-transparent mb-6 sm:mb-8">
-            Contact MeMeY
-          </h1>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Have questions or need support? Reach out to us, and we’ll get back
-            to you as soon as possible.
-          </p>
-        </div>
-
-        {/* Contact Form Section */}
-        <motion.div
-          className="w-full sm:w-4/5 md:w-2/3 lg:w-1/2 mx-auto mt-16"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <div className="bg-gradient-to-br from-white/90 to-blue-50/90 backdrop-blur-lg rounded-2xl shadow-xl p-8 sm:p-10 border border-blue-200 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-blue-600 text-center mb-6 sm:mb-8">
-              Let’s Connect!
-            </h2>
-            <form onSubmit={handleSubmit} className="flex flex-col space-y-6">
-              {/* Honeypot Field */}
-              <input
-                type="text"
-                name="honeypot"
-                value={formData.honeypot}
-                onChange={handleChange}
-                className="hidden"
-                aria-hidden="true"
-              />
-
-              {/* Input Fields */}
-              {[
-                {
-                  id: "name",
-                  type: "text",
-                  placeholder: "Full Name",
-                  required: true,
-                },
-                {
-                  id: "email",
-                  type: "email",
-                  placeholder: "Email Address",
-                  required: true,
-                },
-                {
-                  id: "phone",
-                  type: "tel",
-                  placeholder: "Phone Number",
-                  required: false,
-                },
-                {
-                  id: "subject",
-                  type: "text",
-                  placeholder: "Subject",
-                  required: false,
-                },
-              ].map(({ id, type, placeholder, required }) => (
-                <div key={id} className="relative group">
-                  <input
-                    type={type}
-                    id={id}
-                    name={id}
-                    value={formData[id]}
+    <>
+      <Helmet>
+        <title>Contact MeMeY | Data Analysis Support</title>
+        <meta
+          name="description"
+          content="Contact MeMeY for support or inquiries about our student-focused data analysis platform. Use our form or email support@memey.cloud."
+        />
+        <meta
+          name="keywords"
+          content="contact MeMeY, data analysis support, student data analysis, menu measurement support"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="MeMeY Team" />
+        <meta property="og:title" content="Contact MeMeY" />
+        <meta
+          property="og:description"
+          content="Get in touch with MeMeY for support or inquiries about our data analysis tool."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://memey2-o99r.vercel.app/contact" />
+        <meta
+          property="og:image"
+          content="https://memey2-o99r.vercel.app/mmy-logo.webp"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact MeMeY" />
+        <meta
+          name="twitter:description"
+          content="Get in touch with MeMeY for support or inquiries about our data analysis tool."
+        />
+        <meta
+          name="twitter:image"
+          content="https://memey2-o99r.vercel.app/mmy-logo.webp"
+        />
+        <link rel="canonical" href="https://memey2-o99r.vercel.app/contact" />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+      </Helmet>
+      <main className="relative bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+          <div className="text-center animate-fade-in">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-black to-blue-600 bg-clip-text text-transparent mb-6 sm:mb-8">
+              Contact MeMeY
+            </h1>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              Have questions or need support? Reach out to us, and we’ll get back
+              to you as soon as possible.
+            </p>
+          </div>
+          <motion.div
+            className="w-full sm:w-4/5 md:w-2/3 lg:w-1/2 mx-auto mt-16"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <div className="bg-gradient-to-br from-white/90 to-blue-50/90 backdrop-blur-lg rounded-2xl shadow-xl p-8 sm:p-10 border border-blue-200 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-blue-600 text-center mb-6 sm:mb-8">
+                Let’s Connect!
+              </h2>
+              <form onSubmit={handleSubmit} className="flex flex-col space-y-6">
+                <input
+                  type="text"
+                  name="honeypot"
+                  value={formData.honeypot}
+                  onChange={handleChange}
+                  className="hidden"
+                  aria-hidden="true"
+                />
+                {[
+                  {
+                    id: "name",
+                    type: "text",
+                    placeholder: "Full Name",
+                    required: true,
+                  },
+                  {
+                    id: "email",
+                    type: "email",
+                    placeholder: "Email Address",
+                    required: true,
+                  },
+                  {
+                    id: "phone",
+                    type: "tel",
+                    placeholder: "Phone Number",
+                    required: false,
+                  },
+                  {
+                    id: "subject",
+                    type: "text",
+                    placeholder: "Subject",
+                    required: false,
+                  },
+                ].map(({ id, type, placeholder, required }) => (
+                  <div key={id} className="relative group">
+                    <input
+                      type={type}
+                      id={id}
+                      name={id}
+                      value={formData[id]}
+                      onChange={handleChange}
+                      className={`w-full bg-white/70 text-gray-800 placeholder-transparent border border-blue-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent peer transition-all duration-300 hover:shadow-md ${
+                        errors[id] ? "border-red-500" : ""
+                      }`}
+                      placeholder={placeholder}
+                      aria-required={required}
+                    />
+                    <label
+                      htmlFor={id}
+                      className="absolute left-4 -top-3.5 text-teal-600 text-sm bg-white/80 px-1 rounded transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-blue-600"
+                    >
+                      {placeholder}
+                    </label>
+                    {errors[id] && (
+                      <p className="text-sm text-red-500 mt-1 animate-pulse">
+                        {errors[id]}
+                      </p>
+                    )}
+                  </div>
+                ))}
+                <div className="relative group">
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
                     onChange={handleChange}
+                    rows={5}
+                    placeholder="Your Message"
+                    aria-required="true"
                     className={`w-full bg-white/70 text-gray-800 placeholder-transparent border border-blue-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent peer transition-all duration-300 hover:shadow-md ${
-                      errors[id] ? "border-red-500" : ""
+                      errors.message ? "border-red-500" : ""
                     }`}
-                    placeholder={placeholder}
-                    aria-required={required}
                   />
                   <label
-                    htmlFor={id}
-                    className="absolute left-4 -top-3.5 text-teal-600 text-sm bg-white/80 px-1 rounded transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-blue-600"
+                    htmlFor="message"
+                    className="absolute left-4 -top-3.5 text-teal-600 text-sm bg-white/80 px-1 rounded transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-blue-600  "
                   >
-                    {placeholder}
+                    Your Message
                   </label>
-                  {errors[id] && (
+                  {errors.message && (
                     <p className="text-sm text-red-500 mt-1 animate-pulse">
-                      {errors[id]}
+                      {errors.message}
                     </p>
                   )}
                 </div>
-              ))}
-
-              {/* Message Field */}
-              <div className="relative group">
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={5}
-                  placeholder="Your Message"
-                  aria-required="true"
-                  className={`w-full bg-white/70 text-gray-800 placeholder-transparent border border-blue-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent peer transition-all duration-300 hover:shadow-md ${
-                    errors.message ? "border-red-500" : ""
-                  }`}
-                />
-                <label
-                  htmlFor="message"
-                  className="absolute left-4 -top-3.5 text-teal-600 text-sm bg-white/80 px-1 rounded transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-blue-600"
+                <motion.button
+                  type="submit"
+                  disabled={status === "sending"}
+                  className="bg-gradient-to-br from-blue-500 to-blue-600 text-white font-semibold text-lg py-3 rounded-lg shadow-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  Your Message
-                </label>
-                {errors.message && (
-                  <p className="text-sm text-red-500 mt-1 animate-pulse">
-                    {errors.message}
-                  </p>
+                  {status === "sending" ? "Sending..." : "Send Message"}
+                </motion.button>
+                {statusMessage && (
+                  <motion.p
+                    className={`text-center text-sm mt-2 ${
+                      status === "success" ? "text-green-600" : "text-red-600"
+                    }`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {statusMessage}
+                  </motion.p>
                 )}
-              </div>
-
-              {/* Submit Button */}
-              <motion.button
-                type="submit"
-                disabled={status === "sending"}
-                className="bg-gradient-to-br from-blue-500 to-blue-600 text-white font-semibold text-lg py-3 rounded-lg shadow-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {status === "sending" ? "Sending..." : "Send Message"}
-              </motion.button>
-
-              {/* Status Message */}
-              {statusMessage && (
-                <motion.p
-                  className={`text-center text-sm mt-2 ${
-                    status === "success" ? "text-green-600" : "text-red-600"
-                  }`}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  {statusMessage}
-                </motion.p>
-              )}
-            </form>
+              </form>
+            </div>
+          </motion.div>
+          <div className="mt-12 sm:mt-16 text-center animate-fade-in">
+            <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6 leading-relaxed">
+              Prefer to email us directly? Contact our support team or visit our{" "}
+              <a href="/faq" className="text-blue-600 hover:underline">
+                FAQs
+              </a>!
+            </p>
+            <a
+              href="mailto:support@memey.cloud"
+              className="inline-flex items-center justify-center text-blue-600 hover:text-blue-800 text-base sm:text-lg font-medium transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            >
+              <BiSupport className="w-5 h-5 mr-2" />
+              support@memey.cloud
+            </a>
           </div>
-        </motion.div>
-
-        {/* Support Section */}
-        <div className="mt-12 sm:mt-16 text-center animate-fade-in">
-          <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6 leading-relaxed">
-            Prefer to email us directly? Contact our support team!
-          </p>
-          <a
-            href="mailto:support@memey.cloud"
-            className="inline-flex items-center justify-center text-blue-600 hover:text-blue-800 text-base sm:text-lg font-medium transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-          >
-            <BiSupport className="w-5 h-5 mr-2" />
-            support@memey.cloud
-          </a>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 };
 
