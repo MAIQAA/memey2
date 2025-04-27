@@ -45,6 +45,7 @@ export interface FeatureCardProps {
 export interface PricingCardProps {
   title: string;
   price: string;
+  plan: string;
   description: string;
   features: string[];
   buttonText: string;
@@ -93,8 +94,8 @@ export const paths: Path[] = [
     iconBgColor: "bg-blue-100",
     iconColor: "text-blue-600",
     title: "Blue Pill",
-    description: "Take a guided tour of MeMeY features",
-    buttonText: "Take Tour",
+    description: "See what makes MeMey so easy",
+    buttonText: "Learn More",
     buttonBgColor: "bg-blue-600",
     buttonHoverColor: "hover:bg-blue-700",
     link: "/blue-pill",
@@ -119,10 +120,10 @@ export const comparisons: Comparison[] = [
     icon: IoCodeSlashSharp,
     title: "Traditional Code",
     features: [
+      "✕ Bugs",
+      "✕ Coding + Math Skills",
+      "✕ Long Process",
       "✓ Flexible",
-      "✕ Complex Setup",
-      "✕ Manual Work",
-      "✕ Coding Skills",
     ],
     isHighlighted: false,
   },
@@ -130,10 +131,10 @@ export const comparisons: Comparison[] = [
     icon: FaFileExcel,
     title: "Excel",
     features: [
-      "✓ Easy to Use",
-      "✓ Basic Analysis",
-      "✕ Limited Features",
-      "✕ No AI Support",
+      "✓ Quick Data Load",
+      "✕ Excel + Math Skills",
+      "✕ Bugs/Typos",
+      "✕ Poor Reusability",
     ],
     isHighlighted: false,
   },
@@ -142,20 +143,20 @@ export const comparisons: Comparison[] = [
     title: "MeMeY",
     features: [
       "✓ One-Click Analysis",
-      "✓ Smart Insights",
       "✓ Auto Reporting",
-      "✓ No Code Needed",
+      "✓ FoolProof",
+      "✓ Exportable",
     ],
     isHighlighted: true,
   },
   {
     icon: FaRobot,
-    title: "Other AI Tools",
+    title: "AI Tools",
     features: [
-      "✓ AI Features",
-      "✕ High Cost",
+      "✕ Complex Prompting",
+      "✓ AI Reporting",
+      "✓ Smart Error-Checking",
       "✕ Limited Export",
-      "✕ Complex UI",
     ],
     isHighlighted: false,
   },
@@ -190,8 +191,9 @@ export const features: FeatureCardProps[] = [
 
 export const pricingPlans: PricingCardProps[] = [
   {
-    title: "Indiviual License",
+    title: "Individual License",
     price: "$99",
+    plan: "/year",
     description: "Ideal for individual users, students, and solo analysts.",
     features: [
       "Use on 1 device",
@@ -200,18 +202,18 @@ export const pricingPlans: PricingCardProps[] = [
       "Interpretation assistant",
       "Local processing",
     ],
-    buttonText: "Contact Us",
+    buttonText: "Buy Now",
   },
   {
-    title: "Institution License",
+    title: "Institutional Licenses",
     price: "$89",
+    plan: "/year per license",
     description: "Tailored for universities, labs, and large organizations.",
     features: [
-
       "Classroom or lab deployment",
       "Compliance support (HIPAA, GDPR)",
       "Direct access to tech team for setup",
-      "Priority Email Support"
+      "Priority Email Support",
     ],
     buttonText: "Contact Us",
   },
@@ -263,17 +265,15 @@ export const faqs: FAQ[] = [
   {
     question: "What is MeMeY?",
     answer:
-      "MeMeY is a user-friendly data analysis tool designed specifically for students. It simplifies the process of analyzing research data while maintaining powerful capabilities, allowing you to focus on results rather than complexity.",
+      "MeMeY is a user-friendly data analysis tool designed specifically for students. It simplifies the process of analyzing research data, allowing you to focus on results rather than complexity.",
   },
   {
     question: "How do I get started with MeMeY?",
-    answer:
-      "To get started, sign up for an account on our website, download the MeMeY app, and follow the onboarding tutorial. You can also check out our tutorial videos on the Help page for a step-by-step guide on logging in and importing data.",
+    answer: `To get started, download the MeMeY app and follow the <a class="!text-blue-600" href="/walkthrough">Walkthrough</a>. You can also check out our <b>short</b>, soundless tutorial videos on the <a class="!text-blue-600" href="/help">Help</a> page for a quick guide to importing data and running an analysis.`,
   },
   {
     question: "Is my data secure with MeMeY?",
-    answer:
-      "Yes, MeMeY prioritizes your privacy. We don’t sell your email or personal information to third parties, and we don’t record your payment details or any data you input into the app. MeMeY is designed to work fully offline, ensuring your data stays private. Check our Privacy Policy for more details.",
+    answer: `Yes, MeMeY prioritizes your privacy. We don’t sell your email or personal information to third parties, and we don’t record your payment details or any data you input into the app. MeMeY is designed to work fully offline, ensuring your data stays private. Check our <a href="privacy-policy" class="!text-blue-600">Privacy Policy</a> for more details.`,
   },
   {
     question: "What kind of data can I analyze with MeMeY?",

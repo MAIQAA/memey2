@@ -7,6 +7,7 @@ import { pricingPlans, PricingCardProps } from "../../constants/data.ts";
 const PricingCard: React.FC<PricingCardProps> = ({
   title,
   price,
+  plan,
   description,
   features,
   buttonText,
@@ -26,7 +27,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
             </h3>
             <div className="mt-2 flex items-baseline gap-2">
               <span className="text-3xl font-bold text-gray-900">{price}</span>
-              <span className="text-sm text-gray-500">/ year</span>
+              <span className="text-sm text-gray-500">{plan}</span>
             </div>
             <p className="mt-2 text-sm text-gray-600">{description}</p>
           </div>
@@ -85,6 +86,7 @@ const PricingSection: React.FC = () => {
               key={index}
               title={plan.title}
               price={plan.price}
+              plan={plan.plan}
               description={plan.description}
               features={plan.features}
               buttonText={plan.buttonText}

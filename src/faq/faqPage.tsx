@@ -113,7 +113,7 @@ const FAQPage: React.FC = () => {
                       role="region"
                       aria-labelledby={`faq-question-${index}`}
                     >
-                      {faq.answer}
+                      <p dangerouslySetInnerHTML={{ __html: faq.answer }} />
                     </div>
                   )}
                 </div>

@@ -50,11 +50,6 @@ const footerSections: { title: string; links: Link[] }[] = [
         href: "mailto:support@memey.cloud",
         isExternal: true,
       },
-      {
-        label: "+1-234-567-8900",
-        href: "tel:+12345678900",
-        isExternal: true,
-      },
     ],
   },
 ];
