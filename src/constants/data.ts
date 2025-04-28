@@ -121,9 +121,9 @@ export const comparisons: Comparison[] = [
     icon: IoCodeSlashSharp,
     title: "Traditional Code",
     features: [
-      "✕ Bugs",
-      "✕ Coding + Math Skills",
       "✕ Long Process",
+      "✕ Coding + Math Skills",
+      "✕ Bugs",
       "✓ Flexible",
     ],
     isHighlighted: false,

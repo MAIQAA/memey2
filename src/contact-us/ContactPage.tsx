@@ -22,7 +22,9 @@ const ContactPage: React.FC = () => {
     honeypot: "",
   });
   const [errors, setErrors] = useState<Partial<ContactFormFields>>({});
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
   const [statusMessage, setStatusMessage] = useState("");
 
   const validateForm = (): boolean => {
@@ -38,55 +40,51 @@ const ContactPage: React.FC = () => {
     return Object.keys(newErrors).length === 0;
   };
 
- const handleSubmit = async (e: FormEvent) => {
-   e.preventDefault();
-   if (formData.honeypot) return;
-   if (!validateForm()) return;
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    if (formData.honeypot) return;
+    if (!validateForm()) return;
 
-   setStatus("sending");
-   setStatusMessage("");
+    setStatus("sending");
+    setStatusMessage("");
 
-   const apiUrl =
-     process.env.NODE_ENV === "development"
-       ? "http://localhost:5000/api/contact"
-       : "https://memey2-o99r.vercel.app/api/contact";
+    const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/api/contact`;
 
-   try {
-     const response = await fetch(apiUrl, {
-       method: "POST",
-       headers: { "Content-Type": "application/json" },
-       body: JSON.stringify({
-         name: formData.name,
-         email: formData.email,
-         phone: formData.phone,
-         subject: formData.subject,
-         message: formData.message,
-       }),
-     });
+    try {
+      const response = await fetch(apiUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
 
-     if (response.ok) {
-       const data = await response.json();
-       setStatus("success");
-       setStatusMessage(data.message);
-       setFormData({
-         name: "",
-         email: "",
-         phone: "",
-         subject: "",
-         message: "",
-         honeypot: "",
-       });
-       setErrors({});
-     } else {
-       setStatus("error");
-       setStatusMessage("Failed to send message. Please try again.");
-     }
-   } catch (error) {
-     setStatus("error");
-     setStatusMessage("Error sending message. Please try again.");
-   }
- };
-
+      if (response.ok) {
+        const data = await response.json();
+        setStatus("success");
+        setStatusMessage(data.message);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+          honeypot: "",
+        });
+        setErrors({});
+      } else {
+        setStatus("error");
+        setStatusMessage("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      setStatus("error");
+      setStatusMessage("Error sending message. Please try again.");
+    }
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -145,7 +143,10 @@ const ContactPage: React.FC = () => {
           content="Get in touch with MeMeY for support or inquiries about our data analysis tool."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://memey2-o99r.vercel.app/contact" />
+        <meta
+          property="og:url"
+          content="https://memey2-o99r.vercel.app/contact"
+        />
         <meta
           property="og:image"
           content="https://memey2-o99r.vercel.app/mmy-logo.webp"
@@ -161,7 +162,9 @@ const ContactPage: React.FC = () => {
           content="https://memey2-o99r.vercel.app/mmy-logo.webp"
         />
         <link rel="canonical" href="https://memey2-o99r.vercel.app/contact" />
-        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
       </Helmet>
       <main className="relative bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
@@ -170,8 +173,8 @@ const ContactPage: React.FC = () => {
               Contact MeMeY
             </h1>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Have questions or need support? Reach out to us, and we’ll get back
-              to you as soon as possible.
+              Have questions or need support? Reach out to us, and we’ll get
+              back to you as soon as possible.
             </p>
           </div>
           <motion.div
@@ -299,7 +302,8 @@ const ContactPage: React.FC = () => {
               Prefer to email us directly? Contact our support team or visit our{" "}
               <a href="/faq" className="text-blue-600 hover:underline">
                 FAQs
-              </a>!
+              </a>
+              !
             </p>
             <a
               href="mailto:support@memey.cloud"
