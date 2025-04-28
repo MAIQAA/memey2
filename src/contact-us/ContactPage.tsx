@@ -38,49 +38,55 @@ const ContactPage: React.FC = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    if (formData.honeypot) return;
-    if (!validateForm()) return;
+ const handleSubmit = async (e: FormEvent) => {
+   e.preventDefault();
+   if (formData.honeypot) return;
+   if (!validateForm()) return;
 
-    setStatus("sending");
-    setStatusMessage("");
+   setStatus("sending");
+   setStatusMessage("");
 
-    try {
-      const response = await fetch("http://localhost:5000/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          subject: formData.subject,
-          message: formData.message,
-        }),
-      });
+   const apiUrl =
+     process.env.NODE_ENV === "development"
+       ? "http://localhost:5000/api/contact"
+       : "https://memey2-o99r.vercel.app/api/contact";
 
-      if (response.ok) {
-        const data = await response.json();
-        setStatus("success");
-        setStatusMessage(data.message);
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          subject: "",
-          message: "",
-          honeypot: "",
-        });
-        setErrors({});
-      } else {
-        setStatus("error");
-        setStatusMessage("Failed to send message. Please try again.");
-      }
-    } catch (error) {
-      setStatus("error");
-      setStatusMessage("Error sending message. Please try again.");
-    }
-  };
+   try {
+     const response = await fetch(apiUrl, {
+       method: "POST",
+       headers: { "Content-Type": "application/json" },
+       body: JSON.stringify({
+         name: formData.name,
+         email: formData.email,
+         phone: formData.phone,
+         subject: formData.subject,
+         message: formData.message,
+       }),
+     });
+
+     if (response.ok) {
+       const data = await response.json();
+       setStatus("success");
+       setStatusMessage(data.message);
+       setFormData({
+         name: "",
+         email: "",
+         phone: "",
+         subject: "",
+         message: "",
+         honeypot: "",
+       });
+       setErrors({});
+     } else {
+       setStatus("error");
+       setStatusMessage("Failed to send message. Please try again.");
+     }
+   } catch (error) {
+     setStatus("error");
+     setStatusMessage("Error sending message. Please try again.");
+   }
+ };
+
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
