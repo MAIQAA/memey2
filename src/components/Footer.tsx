@@ -35,7 +35,7 @@ const footerSections: { title: string; links: Link[] }[] = [
       { label: "FAQ", href: "/faq" },
       { label: "Help Center", href: "/help" },
       { label: "WalkThrough", href: "/walkthrough" },
-      { label: "Contact Us", href: "/contact" },
+      { label: "Contact Us", href: "/contact-us" },
     ],
   },
   {
