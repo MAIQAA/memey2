@@ -11,7 +11,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
   description,
   features,
   buttonText,
-  buttonUrl
+  buttonUrl,
 }) => {
   return (
     <div className="group relative w-full h-[500px] flex flex-col">
@@ -88,6 +88,7 @@ const PricingSection: React.FC = () => {
               title={plan.title}
               price={plan.price}
               plan={plan.plan}
+              buttonUrl={plan.buttonUrl}
               description={plan.description}
               features={plan.features}
               buttonText={plan.buttonText}
