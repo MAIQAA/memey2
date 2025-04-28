@@ -51,7 +51,7 @@ const ContactPage: React.FC = () => {
     const apiUrl =
       process.env.NODE_ENV === "development"
         ? "http://localhost:5000/api/contact"
-        : "https://memey2-o99r.vercel.app/api/contact";
+        : "/api/contact";
 
     try {
       const response = await fetch(apiUrl, {
@@ -81,11 +81,15 @@ const ContactPage: React.FC = () => {
         setErrors({});
       } else {
         setStatus("error");
-        setStatusMessage("Failed to send message. Please try again.");
+        setStatusMessage(
+          "Failed to send message. Please email support@memey.cloud."
+        );
       }
     } catch (error) {
       setStatus("error");
-      setStatusMessage("Error sending message. Please try again.");
+      setStatusMessage(
+        "Error sending message. Please email support@memey.cloud."
+      );
     }
   };
 
@@ -266,7 +270,7 @@ const ContactPage: React.FC = () => {
                   />
                   <label
                     htmlFor="message"
-                    className="absolute left-4 -top-3.5 text-teal-600 text-sm bg-white/80 px-1 rounded transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-blue-600  "
+                    className="absolute left-4 -top-3.5 text-teal-600 text-sm bg-white/80 px-1 rounded transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-blue-600"
                   >
                     Your Message
                   </label>
