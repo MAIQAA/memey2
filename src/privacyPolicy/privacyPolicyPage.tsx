@@ -105,7 +105,7 @@ const PrivacyPolicy: React.FC = () => {
             </p>
             <p className="text-gray-700 text-base sm:text-lg font-medium">
               Why do other companies make these agreements so complicated?{" "}
-              <a href="/contact" className="text-blue-600 hover:underline">
+              <a href="/contact-us" className="text-blue-600 hover:underline">
                 Contact us
               </a>{" "}
               to discuss your privacy concerns.
