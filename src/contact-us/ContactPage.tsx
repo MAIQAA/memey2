@@ -82,13 +82,13 @@ const ContactPage: React.FC = () => {
       } else {
         setStatus("error");
         setStatusMessage(
-          "Failed to send message. Please email support@memey.cloud."
+          "Failed to send message. Please email support@memey.cloud"
         );
       }
     } catch (error) {
       setStatus("error");
       setStatusMessage(
-        "Error sending message. Please email support@memey.cloud."
+        "Error sending message. Please email support@memey.cloud"
       );
     }
   };
