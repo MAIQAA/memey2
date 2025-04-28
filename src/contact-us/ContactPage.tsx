@@ -48,7 +48,10 @@ const ContactPage: React.FC = () => {
     setStatus("sending");
     setStatusMessage("");
 
-    const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/api/contact`;
+    const apiUrl =
+      process.env.NODE_ENV === "development"
+        ? "http://localhost:5000/api/contact"
+        : "https://memey2-o99r.vercel.app/api/contact";
 
     try {
       const response = await fetch(apiUrl, {
