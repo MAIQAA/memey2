@@ -57,7 +57,10 @@ const PrivacyPolicy: React.FC = () => {
           name="twitter:image"
           content="https://memey2-o99r.vercel.app/mmy-logo.webp"
         />
-        <link rel="canonical" href="https://memey2-o99r.vercel.app/privacy-policy" />
+        <link
+          rel="canonical"
+          href="https://memey2-o99r.vercel.app/privacy-policy"
+        />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>

@@ -43,7 +43,10 @@ const Walkthrough: React.FC = () => {
           content="Explore MeMeY’s step-by-step walkthrough to master data analysis for students."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://memey2-o99r.vercel.app/walkthrough" />
+        <meta
+          property="og:url"
+          content="https://memey2-o99r.vercel.app/walkthrough"
+        />
         <meta
           property="og:image"
           content="https://memey2-o99r.vercel.app/mmy-logo.webp"
@@ -58,7 +61,10 @@ const Walkthrough: React.FC = () => {
           name="twitter:image"
           content="https://memey2-o99r.vercel.app/mmy-logo.webp"
         />
-        <link rel="canonical" href="https://memey2-o99r.vercel.app/walkthrough" />
+        <link
+          rel="canonical"
+          href="https://memey2-o99r.vercel.app/walkthrough"
+        />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
@@ -72,7 +78,7 @@ const Walkthrough: React.FC = () => {
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto">
               Discover how MeMeY simplifies data analysis with these key
               features and tools.{" "}
-              <a href="/contact" className="text-blue-600 hover:underline">
+              <a href="/contact-us" className="text-blue-600 hover:underline">
                 Contact us
               </a>{" "}
               for personalized support.
