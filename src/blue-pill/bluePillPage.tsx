@@ -120,7 +120,7 @@ const BluePillSection: React.FC = () => {
             </p>
             <p>
               Sounds good?{" "}
-              <a href="/contact" className="text-blue-600 hover:underline">
+              <a href="/contact-us" className="text-blue-600 hover:underline">
                 Contact us
               </a>{" "}
               to learn more!

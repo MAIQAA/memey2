@@ -108,7 +108,7 @@ const RedPillSection: React.FC = () => {
               Crucially, I must also mention that Measure Menu Y is not an AI.
               Why not? Because commercial AI technology has three flaws which
               make it unsuitable for scanning.{" "}
-              <a href="/contact" className="text-blue-600 hover:underline">
+              <a href="/contact-us" className="text-blue-600 hover:underline">
                 Contact us
               </a>{" "}
               to learn more about how MeMeY differs.
