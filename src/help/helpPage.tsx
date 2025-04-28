@@ -156,7 +156,7 @@ const HelpPage: React.FC = () => {
               View FAQs
             </a>
             <a
-              href="mailto:support@memey.cloud"
+              href="/contact-us"
               className="inline-flex items-center justify-center text-blue-600 hover:text-blue-800 text-base sm:text-lg font-medium transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
               <BiSupport className="w-5 h-5 mr-2" />

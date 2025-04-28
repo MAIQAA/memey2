@@ -116,7 +116,7 @@ const PrivacyPolicy: React.FC = () => {
               Have more questions about your privacy? Reach out to us!
             </p>
             <a
-              href="mailto:mmy@memey.cloud"
+              href="/contact-us"
               className="inline-flex items-center justify-center text-blue-600 hover:text-blue-800 text-base sm:text-lg font-medium transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
               <svg
