@@ -49,6 +49,7 @@ export interface PricingCardProps {
   description: string;
   features: string[];
   buttonText: string;
+  buttonUrl: string;
   isRecommended?: boolean;
 }
 
@@ -203,6 +204,8 @@ export const pricingPlans: PricingCardProps[] = [
       "Local processing",
     ],
     buttonText: "Buy Now",
+    buttonUrl:
+      "https://www.dropbox.com/scl/fo/vs0kd7ouak67dj3dtihhq/APcMhaGyeXZ6To5ge-T3mTU?rlkey=31b82d5dypdj74g7dcahiacwe&st=lo13dbcn&dl=0",
   },
   {
     title: "Institutional Licenses",
@@ -216,6 +219,7 @@ export const pricingPlans: PricingCardProps[] = [
       "Priority Email Support",
     ],
     buttonText: "Contact Us",
+    buttonUrl: "/contact-us"
   },
 ];
 

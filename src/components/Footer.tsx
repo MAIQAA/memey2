@@ -138,7 +138,7 @@ const Footer: React.FC = () => {
               </Link>
             </span>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              Built for students, by students.
+              Simplify Your Research
             </p>
           </div>
 
