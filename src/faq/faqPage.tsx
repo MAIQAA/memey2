@@ -20,8 +20,18 @@ const FAQPage: React.FC = () => {
   const handleCancelSubscription = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage(""); // Clear any previous error
+
+    const webhookUrl = process.env.REACT_APP_ZAPIER_WEBHOOK;
+    if (!webhookUrl) {
+      setErrorMessage("Configuration error. Please contact support.");
+      console.error(
+        "REACT_APP_ZAPIER_WEBHOOK is not defined in environment variables."
+      );
+      return;
+    }
+
     const alphanumeric = `${postPaymentCode},${email}`;
-    const url = `https://hooks.zapier.com/hooks/catch/19921265/uyu3db6/?alphanumeric=${encodeURIComponent(
+    const url = `${webhookUrl}?alphanumeric=${encodeURIComponent(
       alphanumeric
     )}`;
 
