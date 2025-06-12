@@ -8,13 +8,13 @@ const RedPillSection: React.FC = () => {
     name: "MeMeY Red Pill - Data Analysis for Research",
     description:
       "MeMeY revolutionizes data analysis for researchers by scanning entire datasets for significant relationships, reducing fraud and enhancing discovery.",
-    url: "https://memey2-o99r.vercel.app/red-pill",
+    url: "https://memey.cloud/red-pill",
     publisher: {
       "@type": "Organization",
       name: "MeMeY",
       logo: {
         "@type": "ImageObject",
-        url: "https://memey2-o99r.vercel.app/mmy-logo.webp",
+        url: "https://memey.cloud/mmy-logo.webp",
       },
     },
     mainEntity: {
@@ -48,7 +48,7 @@ const RedPillSection: React.FC = () => {
           content="MeMeY revolutionizes data analysis for researchers with dataset scanning to reduce fraud and enhance discovery."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://memey2-o99r.vercel.app/red-pill" />
+        <meta property="og:url" content="https://memey.cloud/red-pill" />
         <meta
           property="og:image"
           content="https://memey.cloud/wp-content/uploads/2024/08/red-pill.png"
@@ -66,7 +66,7 @@ const RedPillSection: React.FC = () => {
           name="twitter:image"
           content="https://memey.cloud/wp-content/uploads/2024/08/red-pill.png"
         />
-        <link rel="canonical" href="https://memey2-o99r.vercel.app/red-pill" />
+        <link rel="canonical" href="https://memey.cloud/red-pill" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>

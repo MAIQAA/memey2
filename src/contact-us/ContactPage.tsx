@@ -114,13 +114,13 @@ const ContactPage: React.FC = () => {
     name: "Contact MeMeY",
     description:
       "Contact MeMeY for support or inquiries about our data analysis platform for students.",
-    url: "https://memey2-o99r.vercel.app/contact",
+    url: "https://memey.cloud/contact",
     publisher: {
       "@type": "Organization",
       name: "MeMeY",
       logo: {
         "@type": "ImageObject",
-        url: "https://memey2-o99r.vercel.app/mmy-logo.webp",
+        url: "https://memey.cloud/mmy-logo.webp",
       },
     },
     contactPoint: {
@@ -150,14 +150,8 @@ const ContactPage: React.FC = () => {
           content="Get in touch with MeMeY for support or inquiries about our data analysis tool."
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://memey2-o99r.vercel.app/contact"
-        />
-        <meta
-          property="og:image"
-          content="https://memey2-o99r.vercel.app/mmy-logo.webp"
-        />
+        <meta property="og:url" content="https://memey.cloud/contact" />
+        <meta property="og:image" content="https://memey.cloud/mmy-logo.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contact MeMeY" />
         <meta
@@ -166,9 +160,9 @@ const ContactPage: React.FC = () => {
         />
         <meta
           name="twitter:image"
-          content="https://memey2-o99r.vercel.app/mmy-logo.webp"
+          content="https://memey.cloud/mmy-logo.webp"
         />
-        <link rel="canonical" href="https://memey2-o99r.vercel.app/contact" />
+        <link rel="canonical" href="https://memey.cloud/contact" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>

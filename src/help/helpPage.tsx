@@ -54,13 +54,13 @@ const HelpPage: React.FC = () => {
     name: "MeMeY Help & Tutorials",
     description:
       "Watch MeMeY tutorial videos to learn how to use our data analysis platform for students. Get help with login, data import, and more.",
-    url: "https://memey2-o99r.vercel.app/help",
+    url: "https://memey.cloud/help",
     publisher: {
       "@type": "Organization",
       name: "MeMeY",
       logo: {
         "@type": "ImageObject",
-        url: "https://memey2-o99r.vercel.app/mmy-logo.webp",
+        url: "https://memey.cloud/mmy-logo.webp",
       },
     },
   };
@@ -85,11 +85,8 @@ const HelpPage: React.FC = () => {
           content="Learn how to use MeMeY with our tutorial videos for students. Get started with data analysis today."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://memey2-o99r.vercel.app/help" />
-        <meta
-          property="og:image"
-          content="https://memey2-o99r.vercel.app/mmy-logo.webp"
-        />
+        <meta property="og:url" content="https://memey.cloud/help" />
+        <meta property="og:image" content="https://memey.cloud/mmy-logo.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="MeMeY Help & Tutorials" />
         <meta
@@ -98,9 +95,9 @@ const HelpPage: React.FC = () => {
         />
         <meta
           name="twitter:image"
-          content="https://memey2-o99r.vercel.app/mmy-logo.webp"
+          content="https://memey.cloud/mmy-logo.webp"
         />
-        <link rel="canonical" href="https://memey2-o99r.vercel.app/help" />
+        <link rel="canonical" href="https://memey.cloud/help" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>

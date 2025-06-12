@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://memey2-o99r.vercel.app/sitemap.xml
+Sitemap: https://memey.cloud/sitemap.xml

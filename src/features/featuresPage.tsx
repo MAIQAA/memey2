@@ -22,13 +22,13 @@ const FeaturesPage: React.FC = () => {
     name: "MeMeY Features",
     description:
       "Explore the features of MeMeY, a data analysis platform for students. Simplify data analysis with one-click functionality.",
-    url: "https://memey2-o99r.vercel.app/features",
+    url: "https://memey.cloud/features",
     publisher: {
       "@type": "Organization",
       name: "MeMeY",
       logo: {
         "@type": "ImageObject",
-        url: "https://memey2-o99r.vercel.app/mmy-logo.webp",
+        url: "https://memey.cloud/mmy-logo.webp",
       },
     },
     mainEntity: {
@@ -59,10 +59,10 @@ const FeaturesPage: React.FC = () => {
           content="Explore MeMeY's features for easy data analysis, tailored for students."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://memey2-o99r.vercel.app/features" />
+        <meta property="og:url" content="https://memey.cloud/features" />
         <meta
           property="og:image"
-          content="https://memey2-o99r.vercel.app/mmy-logo.webp"
+          content="https://memey.cloud/mmy-logo.webp"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="MeMeY Features" />
@@ -72,9 +72,9 @@ const FeaturesPage: React.FC = () => {
         />
         <meta
           name="twitter:image"
-          content="https://memey2-o99r.vercel.app/mmy-logo.webp"
+          content="https://memey.cloud/mmy-logo.webp"
         />
-        <link rel="canonical" href="https://memey2-o99r.vercel.app/features" />
+        <link rel="canonical" href="https://memey.cloud/features" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>

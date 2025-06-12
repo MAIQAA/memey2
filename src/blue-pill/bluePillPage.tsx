@@ -8,13 +8,13 @@ const BluePillSection: React.FC = () => {
     name: "MeMeY Blue Pill - Simple Data Analysis",
     description:
       "Discover MeMeY, a simple data analysis tool for students. Press one button to analyze data without complexity.",
-    url: "https://memey2-o99r.vercel.app/blue-pill",
+    url: "https://memey.cloud/blue-pill",
     publisher: {
       "@type": "Organization",
       name: "MeMeY",
       logo: {
         "@type": "ImageObject",
-        url: "https://memey2-o99r.vercel.app/mmy-logo.webp",
+        url: "https://memey.cloud/mmy-logo.webp",
       },
     },
   };
@@ -42,14 +42,8 @@ const BluePillSection: React.FC = () => {
           content="MeMeY offers a one-click data analysis solution for students. Simplify your workflow today."
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://memey2-o99r.vercel.app/blue-pill"
-        />
-        <meta
-          property="og:image"
-          content="https://memey2-o99r.vercel.app/blue-pill.png"
-        />
+        <meta property="og:url" content="https://memey.cloud/blue-pill" />
+        <meta property="og:image" content="https://memey.cloud/blue-pill.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -61,9 +55,9 @@ const BluePillSection: React.FC = () => {
         />
         <meta
           name="twitter:image"
-          content="https://memey2-o99r.vercel.app/blue-pill.png"
+          content="https://memey.cloud/blue-pill.png"
         />
-        <link rel="canonical" href="https://memey2-o99r.vercel.app/blue-pill" />
+        <link rel="canonical" href="https://memey.cloud/blue-pill" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>

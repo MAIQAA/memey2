@@ -14,13 +14,13 @@ const Home: React.FC = () => {
     name: "MeMeY - Data Analysis for Students",
     description:
       "MeMeY is a simple data analysis tool for students, offering one-click insights and offline functionality. Start analyzing data today.",
-    url: "https://memey2-o99r.vercel.app/",
+    url: "https://memey.cloud/",
     publisher: {
       "@type": "Organization",
       name: "MeMeY",
       logo: {
         "@type": "ImageObject",
-        url: "https://memey2-o99r.vercel.app/mmy-logo.webp",
+        url: "https://memey.cloud/mmy-logo.webp",
       },
     },
     mainEntity: {
@@ -34,7 +34,7 @@ const Home: React.FC = () => {
       },
       offers: {
         "@type": "Offer",
-        url: "https://memey2-o99r.vercel.app/pricing",
+        url: "https://memey.cloud/pricing",
         availability: "https://schema.org/InStock",
       },
     },
@@ -63,11 +63,8 @@ const Home: React.FC = () => {
           content="Discover MeMeY, the simplest data analysis tool for students. Analyze data with one click and work offline."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://memey2-o99r.vercel.app/" />
-        <meta
-          property="og:image"
-          content="https://memey2-o99r.vercel.app/mmy-logo.webp"
-        />
+        <meta property="og:url" content="https://memey.cloud/" />
+        <meta property="og:image" content="https://memey.cloud/mmy-logo.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -79,9 +76,9 @@ const Home: React.FC = () => {
         />
         <meta
           name="twitter:image"
-          content="https://memey2-o99r.vercel.app/mmy-logo.webp"
+          content="https://memey.cloud/mmy-logo.webp"
         />
-        <link rel="canonical" href="https://memey2-o99r.vercel.app/" />
+        <link rel="canonical" href="https://memey.cloud/" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
